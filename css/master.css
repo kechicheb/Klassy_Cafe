@@ -1,7 +1,9 @@
 /* Start Variables */
 :root {
   --main-color: #fb5849;
-  --black-color:#2a2a2a;
+  --black-color: #2a2a2a;
+  --white-color: #fff;
+  --main-transition: 0.3s;
 }
 
 /* End Variables */
@@ -11,9 +13,11 @@
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  /* outline: 1px solid limegreen; */
 }
-html, body {
-  font-family: 'Poppins', sans-serif;
+html,
+body {
+  font-family: "Poppins", sans-serif;
   font-weight: 400;
   background-color: #fff;
   font-size: 16px;
@@ -26,12 +30,18 @@ a {
   text-decoration: none !important;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin-top: 0px;
   margin-bottom: 0px;
 }
 
-ul, li {
+ul,
+li {
   padding: 0;
   margin: 0;
   list-style: none;
@@ -40,7 +50,7 @@ ul, li {
 p {
   font-size: 14px;
   line-height: 25px;
-  color:  var(--black-color);
+  color: var(--black-color);
 }
 ::-webkit-scrollbar {
   width: 8px;
@@ -90,3 +100,194 @@ p {
     width: 1170px;
   }
 }
+/* End Global Rules  */
+
+/* Start Header */
+header {
+  background-color: var(--white-color);
+}
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+header .container > ul.links {
+  display: flex;
+  gap: 30px;
+}
+header .container > ul.links li a {
+  color: var(--black-color);
+  font-weight: 500;
+  transition: all var(--main-transition);
+  -webkit-transition: all var(--main-transition);
+  -moz-transition: all var(--main-transition);
+  -ms-transition: all var(--main-transition);
+  -o-transition: all var(--main-transition);
+}
+header .container > ul.links li :is(a:hover, a:focus, a:active) {
+  color: var(--main-color);
+}
+header .container > ul.links li:nth-child(5) {
+  position: relative;
+}
+header .container > ul.links li:nth-child(5) > ul {
+  position: absolute;
+  top: 50px;
+  z-index: 99;
+  background-color: #f7f7f7;
+  width: 200px;
+  opacity: 0;
+  transition: all var(--main-transition);
+  -webkit-transition: all var(--main-transition);
+  -moz-transition: all var(--main-transition);
+  -ms-transition: all var(--main-transition);
+  -o-transition: all var(--main-transition);
+}
+header .container > ul.links li:nth-child(5):hover > ul {
+  opacity: 1;
+  top: 30px;
+}
+header .container > ul.links li:nth-child(5) > ul li {
+  padding: 12px;
+  cursor: pointer;
+}
+header .container > ul.links li:nth-child(5) > ul li:not(:last-child) {
+  border-bottom: 1px solid rgb(223, 223, 223);
+}
+header .container > ul.links li:nth-child(5) > ul li a {
+  font-weight: normal;
+  font-size: 15px;
+  display: inline-block;
+  transition: all var(--main-transition);
+  -webkit-transition: all var(--main-transition);
+  -moz-transition: all var(--main-transition);
+  -ms-transition: all var(--main-transition);
+  -o-transition: all var(--main-transition);
+}
+header .container > ul.links li:nth-child(5) > ul li a:hover {
+  color: var(--main-color);
+  transform: translateX(10px);
+  -webkit-transform: translateX(10px);
+  -moz-transform: translateX(10px);
+  -ms-transform: translateX(10px);
+  -o-transform: translateX(10px);
+}
+header .container .nav {
+  gap: 7px;
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+}
+header .container .nav.active ~ ul.links {
+  display: flex;
+}
+header .container .nav span {
+  border: 1px solid var(--black-color);
+  width: 30px;
+}
+header .container .nav :is(span:last-child, span:first-child) {
+  width: 22px;
+  transition: all var(--main-transition);
+  -webkit-transition: all var(--main-transition);
+  -moz-transition: all var(--main-transition);
+  -ms-transition: all var(--main-transition);
+  -o-transition: all var(--main-transition);
+}
+header .container .nav.active {
+  gap: 0;
+}
+
+header .container .nav.active span:nth-child(2) {
+  display: none;
+}
+header .container .nav.active :is(span:last-child, span:first-child) {
+  width: 35px;
+}
+header .container .nav.active span:first-child {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+}
+header .container .nav.active span:last-child {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+}
+@media (max-width: 767px) {
+  header .container .nav { 
+    display: flex;
+  }
+  header .container > ul.links {
+    position: absolute;
+    top: 100%;
+    left: 15px;
+    display: none;
+    gap: 0;
+    flex-direction: column;
+    text-align: center;
+    width: calc(100% - 30px);
+  }
+  header .container > ul.links li {
+    padding: 18px !important;
+    border-top: 1px solid rgb(223, 223, 223);
+    background-color: #f7f7f7;
+    cursor: pointer;
+    width: 100%;
+    transition: all var(--main-transition);
+    -webkit-transition: all var(--main-transition);
+    -moz-transition: all var(--main-transition);
+    -ms-transition: all var(--main-transition);
+    -o-transition: all var(--main-transition);
+  }
+  header .container > ul.links > li:not(:nth-child(5)):hover {
+    background-color: rgb(224, 224, 224);
+  }
+  header .container > ul.links > li:not(:nth-child(5)):hover > a {
+    color: var(--main-color);
+  }
+
+  header .container > ul.links li:nth-child(5) {
+    padding: 0 !important;
+  }
+  header .container > ul.links li:nth-child(5) > a {
+    padding: 0 !important;
+    width: 100%;
+  }
+  header .container > ul.links li:nth-child(5) > a:hover {
+    background-color: rgb(224, 224, 224);
+  }
+  header .container > ul.links li:nth-child(5) > a {
+    padding: 18px !important;
+    display: inline-block;
+  }
+  header .container > ul.links li:nth-child(5) ul {
+    all: unset;
+    width: 100%;
+  }
+  header .container > ul.links li:nth-child(5) > ul li {
+    border: none;
+    border-top: 1px solid rgb(223, 223, 223);
+  }
+  header .container > ul.links li:nth-child(5) > ul li:hover {
+    background-color: rgb(224, 224, 224);
+  }
+  header .container > ul.links li:nth-child(5) > ul li:hover a {
+    color: var(--main-color);
+  }
+  header .container > ul.links li:nth-child(5) > ul li a:hover {
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+  }
+}
+/* End Header */
