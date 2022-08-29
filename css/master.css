@@ -138,7 +138,7 @@ header .container > ul.links li:nth-child(5) > ul {
   position: absolute;
   top: 50px;
   z-index: 99;
-  background-color: #f7f7f7;
+
   width: 200px;
   opacity: 0;
   transition: all var(--main-transition);
@@ -154,7 +154,13 @@ header .container > ul.links li:nth-child(5):hover > ul {
 header .container > ul.links li:nth-child(5) > ul li {
   padding: 12px;
   cursor: pointer;
+  background-color: #f7f7f7;
+
 }
+header .container > ul.links li:nth-child(5) > ul li:hover {
+  background-color: var(--white-color);
+} 
+
 header .container > ul.links li:nth-child(5) > ul li:not(:last-child) {
   border-bottom: 1px solid rgb(223, 223, 223);
 }
@@ -168,8 +174,9 @@ header .container > ul.links li:nth-child(5) > ul li a {
   -ms-transition: all var(--main-transition);
   -o-transition: all var(--main-transition);
 }
-header .container > ul.links li:nth-child(5) > ul li a:hover {
+header .container > ul.links li:nth-child(5) > ul li:hover a {
   color: var(--main-color);
+
   transform: translateX(10px);
   -webkit-transform: translateX(10px);
   -moz-transform: translateX(10px);
