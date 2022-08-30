@@ -216,9 +216,7 @@ header .container .nav {
   cursor: pointer;
   flex-direction: column;
 }
-header .container .nav.active ~ ul.links {
-  display: flex;
-}
+
 header .container .nav span {
   border: 1px solid var(--black-color);
   width: 30px;
@@ -268,6 +266,9 @@ header .container .nav.active span:last-child {
     flex-direction: column;
     text-align: center;
     width: calc(100% - 30px);
+  }
+  header .container .nav.active ~ ul.links {
+    display: flex !important;
   }
   header .container > ul.links li {
     padding: 18px !important;
@@ -327,6 +328,9 @@ header .container .nav.active span:last-child {
     -ms-transform: translateX(0);
     -o-transform: translateX(0);
   }
+
+
+
 }
 /* End Header */
 
