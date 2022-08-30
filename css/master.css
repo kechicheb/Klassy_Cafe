@@ -252,11 +252,11 @@ header .container .nav span {
 }
 header .container .nav :is(span:last-child, span:first-child) {
   width: 22px;
-  transition: all var(--main-transition);
-  -webkit-transition: all var(--main-transition);
-  -moz-transition: all var(--main-transition);
-  -ms-transition: all var(--main-transition);
-  -o-transition: all var(--main-transition);
+  transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  -o-transition: all 0.4s;
 }
 header .container .nav.active {
   gap: 0;
@@ -285,9 +285,10 @@ header .container .nav.active span:last-child {
 @media (max-width: 767px) {
   header .container .nav {
     display: flex;
-  }
+}
   header .container > ul.links {
     position: absolute;
+    z-index: 99;
     top: 100%;
     left: 15px;
     display: none;
@@ -572,6 +573,9 @@ footer .container .social-icons li a {
   -ms-transition: all var(--main-transition);
   -o-transition: all var(--main-transition);
 }
+footer .container .social-icons li:first-child a {
+  padding:10px 15px;
+}
 footer .container .social-icons li a:hover {
   color: var(--black-color);
 }
@@ -583,6 +587,7 @@ footer .container .col:last-child p {
     flex-direction: column;
     gap: 30px;
   }
+  
   footer .container .col:last-child p {
     margin-block-start: -5px;
     text-align: center;
