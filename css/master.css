@@ -110,8 +110,37 @@ p {
     width: 1170px;
   }
 }
-/* End Global Rules  */
 
+/* End Global Rules  */
+/* Start Component */
+.container .special-head h6 {
+  position: relative;
+  font-size: 15px;
+  color: var(--main-color);
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding-left: 40px;
+}
+.special-head h6::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 8px;
+  height: 1px;
+  width: 30px;
+  background-color: var(--main-color);
+}
+.container .special-head h2 {
+  line-height: 40px;
+  margin-top: 20px;
+  margin-bottom: 25px;
+  font-size: 30px;
+  font-weight: 900;
+  color: var(--black-color);
+  max-width: 400px;
+}
+/* End Component */
 /* Start Loading */
 .loading {
   background-color: var(--main-color);
@@ -328,9 +357,6 @@ header .container .nav.active span:last-child {
     -ms-transform: translateX(0);
     -o-transform: translateX(0);
   }
-
-
-
 }
 /* End Header */
 
@@ -445,33 +471,6 @@ section#about .container {
   grid-template-columns: repeat(auto-fill, minmax(550px, 1fr));
   gap: 20px;
 }
-section#about .container .special-head h6 {
-  position: relative;
-  font-size: 15px;
-  color: var(--main-color);
-  font-weight: 500;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  padding-left: 40px;
-}
-section#about .container .special-head h6::before {
-  position: absolute;
-  content: "";
-  left: 0;
-  top: 8px;
-  height: 1px;
-  width: 30px;
-  background-color: var(--main-color);
-}
-section#about .container .special-head h2 {
-  line-height: 40px;
-  margin-top: 20px;
-  margin-bottom: 25px;
-  font-size: 30px;
-  font-weight: 900;
-  color: var(--black-color);
-  max-width: 400px;
-}
 
 section#about .container .col:first-child p {
   font-size: 14px;
@@ -532,3 +531,10 @@ section#about .container > .col:last-child > img {
 }
 
 /* End About */
+
+/* Start Our Menu */
+section#menu {
+  background-color: #fffafa;
+  padding-block: 120px;
+}
+/* End Our Menu */
