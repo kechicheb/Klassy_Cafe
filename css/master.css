@@ -538,3 +538,54 @@ section#menu {
   padding-block: 120px;
 }
 /* End Our Menu */
+/* Start Footer */
+footer {
+  padding-block: 50px;
+  background-color: var(--main-color);
+}
+footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer .container .social-icons {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+footer .container .social-icons li a {
+  color: var(--main-color);
+  font-size: 20px;
+  background-color: var(--white-color);
+  padding: 10px 12px;
+  margin-inline: 10px;
+  display: inline-block;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  transition: all var(--main-transition);
+  -webkit-transition: all var(--main-transition);
+  -moz-transition: all var(--main-transition);
+  -ms-transition: all var(--main-transition);
+  -o-transition: all var(--main-transition);
+}
+footer .container .social-icons li a:hover {
+  color: var(--black-color);
+}
+footer .container .col:last-child p {
+  color: var(--white-color);
+}
+@media (max-width: 767px) {
+  footer .container {
+    flex-direction: column;
+    gap: 30px;
+  }
+  footer .container .col:last-child p {
+    margin-block-start: -5px;
+    text-align: center;
+  }
+}
+/* End Footer */
