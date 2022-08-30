@@ -1,4 +1,4 @@
-// Header
+//Header
 let header = document.querySelector("header");
 window.onscroll = function () {
   if (window.scrollY >= 600) {

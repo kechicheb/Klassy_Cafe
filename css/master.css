@@ -130,6 +130,7 @@ header {
   width: 100%;
 }
 header.fixed {
+  z-index: 999;
   position: fixed;
   left: 0;
   top: 0;
@@ -167,7 +168,6 @@ header .container > ul.links li:nth-child(5) > ul {
   position: absolute;
   top: 50px;
   z-index: 99;
-
   width: 200px;
   opacity: 0;
   transition: all var(--main-transition);
@@ -204,7 +204,6 @@ header .container > ul.links li:nth-child(5) > ul li a {
 }
 header .container > ul.links li:nth-child(5) > ul li:hover a {
   color: var(--main-color);
-
   transform: translateX(10px);
   -webkit-transform: translateX(10px);
   -moz-transform: translateX(10px);
@@ -281,6 +280,10 @@ header .container .nav.active span:last-child {
     -moz-transition: all var(--main-transition);
     -ms-transition: all var(--main-transition);
     -o-transition: all var(--main-transition);
+  }
+  header .container > ul.links li a {
+    width: 100%;
+    display: inline-block;
   }
   header .container > ul.links > li:not(:nth-child(5)):hover {
     background-color: rgb(224, 224, 224);
@@ -381,7 +384,6 @@ header .container .nav.active span:last-child {
 .landing .left a {
   background-color: var(--white-color);
   color: var(--main-color);
-  font-weight: 600;
   padding: 15px 20px;
   border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -431,3 +433,98 @@ header .container .nav.active span:last-child {
 }
 
 /* End Landing */
+
+/* Start About */
+section#about .container {
+  margin-block: 120px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(550px, 1fr));
+  gap: 20px;
+}
+section#about .container .special-head h6 {
+  position: relative;
+  font-size: 15px;
+  color: var(--main-color);
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding-left: 40px;
+}
+section#about .container .special-head h6::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 8px;
+  height: 1px;
+  width: 30px;
+  background-color: var(--main-color);
+}
+section#about .container .special-head h2 {
+  line-height: 40px;
+  margin-top: 20px;
+  margin-bottom: 25px;
+  font-size: 30px;
+  font-weight: 900;
+  color: var(--black-color);
+  max-width: 400px;
+}
+
+section#about .container .col:first-child p {
+  font-size: 14px;
+  line-height: 25px;
+  color: var(--black-color);
+}
+section#about .container .col:first-child p a {
+  color: #0088fa;
+  transition: all var(--main-transition);
+  -webkit-transition: all var(--main-transition);
+  -moz-transition: all var(--main-transition);
+  -ms-transition: all var(--main-transition);
+  -o-transition: all var(--main-transition);
+}
+section#about .container .col:first-child p a:hover {
+  color: #006bc2;
+}
+section#about .container .col:first-child .row {
+  display: flex;
+  justify-content: space-between;
+}
+section#about .container .col:first-child .row img {
+  max-width: 100%;
+}
+section#about .container > .col:last-child {
+  position: relative;
+  text-align: center;
+}
+section#about .container > .col:last-child a {
+  position: absolute;
+  color: var(--white-color);
+  background-color: var(--main-color);
+  cursor: pointer;
+  padding: 22px 25px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  transition: all var(--main-transition);
+  -webkit-transition: all var(--main-transition);
+  -moz-transition: all var(--main-transition);
+  -ms-transition: all var(--main-transition);
+  -o-transition: all var(--main-transition);
+}
+section#about .container > .col:last-child a:hover {
+  background-color: rgba(251, 88, 73, 0.9);
+}
+section#about .container > .col:last-child > img {
+  max-width: 100%;
+}
+
+/* End About */
