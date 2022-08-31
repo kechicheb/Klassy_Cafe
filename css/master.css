@@ -25,6 +25,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   scroll-behavior: smooth;
+  scroll-padding-top:120px;
 }
 ::-moz-selection {
   /* Code for Firefox */
@@ -177,6 +178,11 @@ header .container {
 header .container > ul.links {
   display: flex;
   gap: 30px;
+}
+@media (min-width:768px) {
+  header .container > ul.links {
+    display: flex !important;
+  }
 }
 header .container > ul.links li a {
   color: var(--black-color);
