@@ -211,7 +211,7 @@ header .container > ul.links li:nth-child(5) > ul {
   -ms-transition: all var(--main-transition);
   -o-transition: all var(--main-transition);
 }
-header .container > ul.links li:nth-child(5):hover > ul {
+header .container > ul.links li:nth-child(5) > ul.active {
   opacity: 1;
   top: 30px;
 }
@@ -851,11 +851,14 @@ section#contact .container .col:last-child form select {
 section#contact .container .col:last-child form input::placeholder {
   color: var(--black-color);
 }
+section#contact .container .col:last-child form textarea::placeholder {
+  color: var(--black-color);
+} 
 section#contact
   .container
   .col:last-child
   form
-  :is(input:focus, textarea:focus) {
+  :is(input:focus, textarea:focus,select:focus) {
   border-color: var(--main-color);
 }
 section#contact .container .col:last-child form textarea {

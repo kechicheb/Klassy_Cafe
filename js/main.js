@@ -8,6 +8,18 @@ window.onscroll = function () {
   }
 };
 
+//onclick on features
+
+let features = document.querySelector(
+  "header .container > ul.links li:nth-child(5) > a"
+);
+let subUl = document.querySelector(
+  "header .container > ul.links li:nth-child(5) > ul"
+);
+features.onclick = function () {
+  subUl.classList.toggle("active");
+};
+
 // toggle button
 let nav = document.querySelector("header .container .nav");
 nav.onclick = function () {
