@@ -25,7 +25,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   scroll-behavior: smooth;
-  scroll-padding-top:120px;
+  scroll-padding-top: 120px;
 }
 ::-moz-selection {
   /* Code for Firefox */
@@ -179,7 +179,7 @@ header .container > ul.links {
   display: flex;
   gap: 30px;
 }
-@media (min-width:768px) {
+@media (min-width: 768px) {
   header .container > ul.links {
     display: flex !important;
   }
@@ -853,12 +853,12 @@ section#contact .container .col:last-child form input::placeholder {
 }
 section#contact .container .col:last-child form textarea::placeholder {
   color: var(--black-color);
-} 
+}
 section#contact
   .container
   .col:last-child
   form
-  :is(input:focus, textarea:focus,select:focus) {
+  :is(input:focus, textarea:focus, select:focus) {
   border-color: var(--main-color);
 }
 section#contact .container .col:last-child form textarea {
