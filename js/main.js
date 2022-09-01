@@ -11,7 +11,7 @@ window.onscroll = function () {
 //onclick on features
 
 let features = document.querySelector(
-  "header .container > ul.links li:nth-child(5) > a"
+  "header .container > ul.links li:nth-child(5)"
 );
 let subUl = document.querySelector(
   "header .container > ul.links li:nth-child(5) > ul"
@@ -27,19 +27,17 @@ nav.onclick = function () {
 };
 
 // header display none when onclick any link
-let link = document.querySelectorAll("header .container > ul.links li a ");
+let link = document.querySelectorAll("header .container > ul.links li:not(:nth-child(5)) a ");
 let ulLinks = document.querySelector("header .container > ul.links");
 
-window.onresize = function () {
-  link.forEach(function (e) {
-    e.onclick = function () {
-      if (window.outerWidth < 767) {
-        ulLinks.style.display = "none";
-        nav.classList.remove("active");
-      }
-    };
-  });
-};
+link.forEach(function (e) {
+  e.onclick = function () {
+    if (window.outerWidth < 767) {
+      ulLinks.style.display = "none";
+      nav.classList.remove("active");
+    }
+  };
+});
 
 // loading
 let loading = document.querySelector(".loading");
