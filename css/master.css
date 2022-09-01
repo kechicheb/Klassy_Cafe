@@ -211,8 +211,7 @@ header .container > ul.links li:nth-child(5) > ul {
   -ms-transition: all var(--main-transition);
   -o-transition: all var(--main-transition);
 }
-header .container > ul.links li:nth-child(5) >  ul.active
-{
+header .container > ul.links li:nth-child(5) > ul.active {
   opacity: 1;
   top: 30px;
   z-index: 99;
@@ -880,6 +879,129 @@ section#contact .container .col:last-child form input[type="submit"]:hover {
   opacity: 0.9;
 }
 /* End Contact Us */
+/* Start Offers */
+section#offers {
+  background-color: var(--white-color);
+  padding-block: 120px;
+}
+
+section#chefs {
+  padding-bottom: 120px;
+}
+section#offers .container .row h6 {
+  font-size: 15px;
+  color: var(--main-color);
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+section#offers .container .row h2 {
+  line-height: 40px;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  font-size: 30px;
+  font-weight: 900;
+  color: var(--black-color);
+  max-width: 400px;
+}
+section#offers .container .row :is(h2, h6) {
+  margin-inline: auto;
+  text-align: center;
+}
+section#offers .container .filters {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding-bottom: 50px;
+}
+section#offers .container .filters li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  cursor: pointer;
+}
+section#offers .container .filters li span {
+  text-transform: capitalize;
+  font-size: 15px;
+  color: var(--black-color);
+  font-weight: 600;
+}
+section#offers .container .filters li.active span {
+  color: var(--main-color);
+}
+section#offers .container .row:last-child > ul {
+  display: none;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+section#offers .container .row:last-child > ul.active {
+  display: flex;
+}
+section#offers .container .row:last-child > ul li {
+  display: flex;
+  align-items: center;
+}
+
+section#offers .container .row:last-child > ul li .text {
+  padding-left: 15px;
+}
+
+section#offers .container .row:last-child > ul li .text h4 {
+margin-block: 12px 10px;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--black-color);
+  
+
+}
+section#offers .container .row:last-child > ul li .text p {
+font-size: 14px;
+line-height: 25px;
+max-width: 350px;
+color: var(--black-color);
+}
+section#offers .container .row:last-child > ul li .price h6 {
+width: 77px;
+height: 70px;
+background-color: var(--main-color);
+text-align: center;
+line-height: 70px;
+border-radius: 3px;
+font-size: 18px;
+font-weight: 700;
+color: var(--white-color);
+}
+@media (max-width:500px) {
+  section#offers .container .row:last-child > ul li {
+    align-items: center;
+}
+section#offers .container .row:last-child > ul li img {
+  width: 70px;
+}
+  section#offers .container .row:last-child > ul li .text {
+    padding-right: 15px;
+}
+  section#offers .container .row:last-child > ul li .text  p {
+    max-width: 160px;
+    font-size: 12px;
+    margin: 0;
+  }
+  section#offers .container .row:last-child > ul li .text h4 {
+    font-size: 16px;
+    margin-bottom: 0 !important;
+  }
+  section#offers .container .row:last-child > ul li .price h6 {
+   width: fit-content;
+   height: fit-content;
+   padding: 15px 10px;
+   font-size:12px ;
+   line-height: normal;
+}
+}
+/* End Offers */
+
 /* Start Footer */
 footer {
   padding-block: 50px;

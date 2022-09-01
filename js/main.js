@@ -27,7 +27,9 @@ nav.onclick = function () {
 };
 
 // header display none when onclick any link
-let link = document.querySelectorAll("header .container > ul.links li:not(:nth-child(5)) a ");
+let link = document.querySelectorAll(
+  "header .container > ul.links li:not(:nth-child(5)) a "
+);
 let ulLinks = document.querySelector("header .container > ul.links");
 
 link.forEach(function (e) {
@@ -44,3 +46,36 @@ let loading = document.querySelector(".loading");
 window.onload = function () {
   loading.style.display = "none";
 };
+
+// Tab Offers
+
+let tabs = document.querySelectorAll("section#offers .container  .filters li");
+let offers = document.querySelectorAll(
+  "section#offers .container .row:last-child > ul"
+);
+let offIndex = "breakfast";
+tabs.forEach(function (e) {
+  e.onclick = function () {
+    tabs.forEach(function (e) {
+      e.classList.remove("active");
+    });
+    this.classList.add("active");
+    offers.forEach(function (e) {
+      e.classList.remove("active");
+    });
+    if (this.classList.contains("tab-1")) {
+      offIndex = "breakfast";
+    } else if (this.classList.contains("tab-2")) {
+      offIndex = "lunch";
+    } else if(this.classList.contains("tab-3")){
+      offIndex = "dinner";
+    }
+    offers.forEach(function (e) {
+      if (e.classList.contains(offIndex)) {
+        e.classList.add("active");
+      }
+    });
+  };
+});
+
+console.log(offers);
