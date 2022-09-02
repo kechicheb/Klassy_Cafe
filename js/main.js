@@ -67,7 +67,11 @@ const swiperr = new Swiper(".swiper-2", {
   spaceBetween: 10,
   // Responsive breakpoints
   breakpoints: {
-    425: {
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 20,
+    },
+    550: {
       slidesPerView: 2,
       spaceBetween: 20,
     },
@@ -87,6 +91,7 @@ const swiperr = new Swiper(".swiper-2", {
     // disableOnInteraction: false,
   },
   loop: true,
+  grabCursor: true,
   navigation: {
     nextEl: ".slider .swiper-button-next",
     prevEl: ".slider .swiper-button-prev",
