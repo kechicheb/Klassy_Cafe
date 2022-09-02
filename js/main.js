@@ -1,3 +1,9 @@
+// loading
+let loading = document.querySelector(".loading");
+window.onload = function () {
+  loading.style.display = "none";
+};
+
 //Header
 let header = document.querySelector("header");
 window.onscroll = function () {
@@ -41,11 +47,24 @@ link.forEach(function (e) {
   };
 });
 
-// loading
-let loading = document.querySelector(".loading");
-window.onload = function () {
-  loading.style.display = "none";
-};
+// Swiper images
+
+const swiper = new Swiper(".swiper", {
+  autoplay: {
+    delay: 4000,
+    disableOnInteraction: false,
+  },
+  loop: true,
+
+  pagination: {
+    el: ".swiper-pagination",
+  },
+
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
 
 // Tab Offers
 
@@ -67,7 +86,7 @@ tabs.forEach(function (e) {
       offIndex = "breakfast";
     } else if (this.classList.contains("tab-2")) {
       offIndex = "lunch";
-    } else if(this.classList.contains("tab-3")){
+    } else if (this.classList.contains("tab-3")) {
       offIndex = "dinner";
     }
     offers.forEach(function (e) {

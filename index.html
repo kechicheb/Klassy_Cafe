@@ -25,7 +25,11 @@
       href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-
+    <!-- Swiperjs -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
     <title>Klassy Cafe - Restaurant HTML Template</title>
   </head>
 
@@ -72,9 +76,21 @@
         <a href="#contact">Make A Reseravtion</a>
       </div>
       <div class="right">
-        <div class="buttons">
-          <div class="prev"><i class="fa-solid fa-angle-left"></i></div>
-          <div class="next"><i class="fa-solid fa-angle-right"></i></div>
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="images/slide-01.jpg" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="images/slide-02.jpg" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="images/slide-03.jpg" alt="" />
+            </div>
+          </div>
+
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
         </div>
       </div>
     </div>
@@ -583,6 +599,7 @@
       </div>
     </footer>
     <!-- End Footer -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/all.min.js"></script>
   </body>
