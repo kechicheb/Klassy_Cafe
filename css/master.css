@@ -407,6 +407,8 @@ header .container .nav.active span:last-child {
   background-color: var(--white-color);
   color: var(--main-color);
   padding: 15px 20px;
+  font-weight: 500;
+  font-size: 15px;
   border-radius: 5px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -424,11 +426,11 @@ header .container .nav.active span:last-child {
 .landing .right {
   grid-column: 2 / span 3;
 }
-.landing .right .swiper {
+.landing .right .swiper-1 {
   width: 100%;
   height: fit-content;
 }
-.landing .right .swiper :is(.swiper-button-prev, .swiper-button-next) {
+.landing .right .swiper-1 :is(.swiper-button-prev, .swiper-button-next) {
   background-color: var(--main-color);
   color: var(--white-color);
   width: 50px;
@@ -445,7 +447,10 @@ header .container .nav.active span:last-child {
   -ms-transition: all var(--main-transition);
   -o-transition: all var(--main-transition);
 }
-.landing .right .swiper :is(.swiper-button-prev:hover, .swiper-button-next:hover) {
+.landing
+  .right
+  .swiper-1
+  :is(.swiper-button-prev:hover, .swiper-button-next:hover) {
   opacity: 1;
 }
 .swiper-button-next::after,
@@ -453,7 +458,7 @@ header .container .nav.active span:last-child {
   font-size: 26px !important;
 }
 
-.landing .right .swiper .swiper-slide img {
+.landing .right .swiper-1 .swiper-slide img {
   max-width: 100%;
   height: 100vh;
 }
@@ -472,10 +477,10 @@ header .container .nav.active span:last-child {
     grid-column: 1 / span 2;
     grid-row: 2 / span 3;
   }
-  .landing .right .swiper .swiper-slide {
+  .landing .right .swiper-1 .swiper-slide {
     height: 70vh;
   }
-  .landing .right .swiper .swiper-slide img {
+  .landing .right .swiper-1 .swiper-slide img {
     height: 100%;
   }
 }
@@ -561,11 +566,37 @@ section#menu {
   background-color: #fffafa;
   padding-block: 120px;
 }
+section#menu .slider {
+  padding-top: 60px;
+  width: calc(100vw - 30px);
+  margin: 0 auto;
+  padding-inline: 15px;
+}
+section#menu .slider .swiper-2 {
+  width: 100%;
+  height: fit-content;
+  /* overflow-y: visible; */
+}
+
+section#menu .slider .swiper-2 img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+@media (min-width: 37.5em) {
+  section#menu .slider  .swiper-button-next {
+    /* show on larger viewports */
+    display: block;
+  }
+}
 /* End Our Menu */
 
 /* Start Our Chefs */
 section#chefs {
-  padding-bottom: 120px;
+  padding-block: 120px;
 }
 section#chefs .container .row h6 {
   font-size: 15px;

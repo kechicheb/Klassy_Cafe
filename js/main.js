@@ -49,20 +49,47 @@ link.forEach(function (e) {
 
 // Swiper images
 
-const swiper = new Swiper(".swiper", {
+const swiper = new Swiper(".swiper-1", {
   autoplay: {
     delay: 4000,
     disableOnInteraction: false,
   },
   loop: true,
 
-  pagination: {
-    el: ".swiper-pagination",
-  },
-
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
+  },
+});
+// secound swiper
+const swiperr = new Swiper(".swiper-2", {
+  slidesPerView: 1,
+  spaceBetween: 10,
+  // Responsive breakpoints
+  breakpoints: {
+    425: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+
+    768: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+    },
+
+    992: {
+      slidesPerView: 4,
+      spaceBetween: 40,
+    },
+  },
+  autoplay: {
+    delay: 4000,
+    // disableOnInteraction: false,
+  },
+  loop: true,
+  navigation: {
+    nextEl: ".slider .swiper-button-next",
+    prevEl: ".slider .swiper-button-prev",
   },
 });
 
@@ -96,5 +123,3 @@ tabs.forEach(function (e) {
     });
   };
 });
-
-console.log(offers);
