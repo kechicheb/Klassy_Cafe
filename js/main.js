@@ -47,6 +47,35 @@ link.forEach(function (e) {
   };
 });
 
+// Change navigation active class on scroll
+const sectionAll = document.querySelectorAll("section[id]");
+const allLinks = document.querySelectorAll(
+  "header .container > ul.links > li > a"
+);
+window.addEventListener("scroll", function () {
+  const scrollY = window.scrollY;
+  sectionAll.forEach((ele) => {
+    const sectionHeight = ele.offsetHeight;
+    const sectionTop = ele.offsetTop - 200;
+    const sectionId = ele.getAttribute("id");
+    if (scrollY >= sectionTop && scrollY < sectionHeight + sectionTop) {
+      allLinks.forEach((e) => {
+        e.classList.remove("active");
+      });
+      // allLinks.forEach((e) => {
+      //   if (e.getAttribute("href") == `#${sectionId}`) {
+      //     e.classList.add("active");
+      //   }
+      // });
+      document
+        .querySelector(
+          `header .container > ul.links > li > a[href="#${sectionId}"]`
+        )
+        .classList.add("active");
+    }
+  });
+});
+
 // Swiper images
 
 const swiper = new Swiper(".swiper-1", {
@@ -55,7 +84,7 @@ const swiper = new Swiper(".swiper-1", {
     disableOnInteraction: false,
   },
   loop: true,
-
+  grabCursor: true,
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",

@@ -171,8 +171,8 @@ header .container {
   justify-content: space-between;
   align-items: center;
   position: relative;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 header .container > ul.links {
@@ -195,6 +195,9 @@ header .container > ul.links li a {
 }
 header .container > ul.links li :is(a:hover, a:focus, a:active) {
   color: var(--main-color);
+}
+header .container > ul.links > li > a.active {
+  color: var(--main-color) !important;
 }
 header .container > ul.links li:nth-child(5) {
   position: relative;
